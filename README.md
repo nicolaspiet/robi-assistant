@@ -1,4 +1,3 @@
-```markdown
 # Voice Assistant with Ollama and Yapper-TTS
 
 A complete voice assistant system that uses Whisper for speech recognition, Ollama for AI responses, and Yapper-TTS for natural Portuguese speech synthesis.
@@ -101,4 +100,3 @@ Change the parameters in the `VoiceAssistant` initialization:
 ### TTS Problems
 - Verify Yapper-TTS installation: `pip show yapper-tts`
 - Check available Piper voices in the Yapper documentation
-```
