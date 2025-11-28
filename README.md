@@ -4,6 +4,16 @@ Linguagens TTS suportadas, verifique [YapperTTS Enums](https://github.com/n1tesh
 
 Um sistema completo de assistente de voz que usa Whisper para reconhecimento de fala, Ollama para respostas de IA e Yapper-TTS para síntese de voz em português natural.
 
+# Demo
+
+
+
+https://github.com/user-attachments/assets/34e2e290-8f89-481c-bce1-8e2410705142
+
+
+
+
+
 ## Funcionalidades
 
 - 🎤 **Reconhecimento de Fala em Tempo Real** usando Whisper
