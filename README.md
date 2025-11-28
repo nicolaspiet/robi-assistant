@@ -65,7 +65,7 @@ O assistente irá:
 ## Estrutura do Projeto
 
 ```
-ifpi/
+root/
 ├── main.py                 # Aplicação principal do assistente de voz
 ├── requirements.txt        # Dependências Python
 ├── README.md              # Este arquivo
