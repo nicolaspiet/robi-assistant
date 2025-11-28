@@ -1,103 +1,102 @@
-# Voice Assistant with Ollama and Yapper-TTS
-Supported TTS languages, check [YapperTTS Enums](https://github.com/n1teshy/yapper-tts/blob/main/yapper/enums.py) 
+# Assistente de Voz com Ollama e Yapper-TTS
 
-A complete voice assistant system that uses Whisper for speech recognition, Ollama for AI responses, and Yapper-TTS for natural Portuguese speech synthesis.
+Linguagens TTS suportadas, verifique [YapperTTS Enums](https://github.com/n1teshy/yapper-tts/blob/main/yapper/enums.py)
 
-## Features
+Um sistema completo de assistente de voz que usa Whisper para reconhecimento de fala, Ollama para respostas de IA e Yapper-TTS para síntese de voz em português natural.
 
-- 🎤 **Real-time Speech Recognition** using Whisper
-- 🧠 **AI-Powered Responses** using Ollama with custom model
-- 🗣️ **Natural Portuguese TTS** using Yapper-TTS with Piper voices
-- 🔇 **Smart Voice Activity Detection** to detect speech and silence
-- 🚫 **Anti-feedback System** prevents listening while speaking
-- ⚡ **Optimized Performance** with token limiting and response cleaning
+## Funcionalidades
 
-## Prerequisites
+- 🎤 **Reconhecimento de Fala em Tempo Real** usando Whisper
+- 🧠 **Respostas com IA** usando Ollama com modelo personalizado
+- 🗣️ **TTS em Português Natural** usando Yapper-TTS com vozes Piper
+- 🔇 **Detecção Inteligente de Atividade Vocal** para detectar fala e silêncio
+- 🚫 **Sistema Anti-feedback** evita escutar enquanto está falando
+- ⚡ **Performance Otimizada** com limitação de tokens e limpeza de respostas
 
-- Python 3.8+
-- Ollama installed and running
-- Microphone access
+## Pré-requisitos
 
-## Installation
+- Python 3.12+
+- Ollama instalado e em execução
+- Acesso ao microfone
 
-1. **Clone the repository**
+## Instalação
+
+1. **Clone o repositório**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/nicolaspiet/robi-assistant.git
    cd ifpi
    ```
 
-2. **Install Python dependencies**
+2. **Instale as dependências Python**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Install and setup Ollama**
+3. **Instale e configure o Ollama**
    ```bash
-   # Install Ollama from https://ollama.ai/
+   # Instale o Ollama em https://ollama.ai/
    ollama serve
    ```
 
-4. **Create the custom Ollama model**
+4. **Crie o modelo personalizado do Ollama**
    ```bash
    ollama create meu-assistente -f ./Modelfile
    ```
 
-## Usage
+## Como Usar
 
-Run the voice assistant:
+Execute o assistente de voz:
 ```bash
 python main.py
 ```
 
-The assistant will:
-1. Start and greet you with "Olá, em que posso ajudar?"
-2. Listen for your voice commands
-3. Process your speech and generate AI responses
-4. Speak the responses back in natural Portuguese
+O assistente irá:
+1. Iniciar e cumprimentar com "Olá, em que posso ajudar?"
+2. Escutar seus comandos de voz
+3. Processar sua fala e gerar respostas de IA
+4. Falar as respostas em português natural
 
-## Controls
+## Controles
 
-- **Speak naturally** - The system detects speech automatically
-- **Press Ctrl+C** - To stop the assistant
-- **Silence detection** - Stops listening after 0.5 seconds of silence
+- **Fale naturalmente** - O sistema detecta fala automaticamente
+- **Pressione Ctrl+C** - Para parar o assistente
+- **Detecção de silêncio** - Para de escutar após 0.5 segundos de silêncio
 
-## Project Structure
+## Estrutura do Projeto
 
 ```
 ifpi/
-├── main.py                 # Main voice assistant application
-├── requirements.txt        # Python dependencies
-├── README.md              # This file
-├── Modelfile              # Ollama custom model configuration
-└── include/               # TEN VAD library files
-    └── ten_vad.py         # Voice Activity Detection
+├── main.py                 # Aplicação principal do assistente de voz
+├── requirements.txt        # Dependências Python
+├── README.md              # Este arquivo
+├── Modelfile              # Configuração do modelo personalizado Ollama
 ```
 
-## Customization
+## Personalização
 
-### Modifying the AI Model
-Edit the `Modelfile` to change the system prompt and model parameters.
+### Modificando o Modelo de IA
+Edite o `Modelfile` para alterar o prompt do sistema e parâmetros do modelo.
 
-### Changing TTS Voice
-Modify the `YapperTTS` class in `main.py` to use different Piper voices.
+### Alterando a Voz TTS
+Modifique a classe `YapperTTS` no `main.py` para usar diferentes vozes Piper.
 
-### Adjusting VAD Settings
-Change the parameters in the `VoiceAssistant` initialization:
-- `threshold`: VAD sensitivity (0.1-1.0)
-- `silence_duration`: Seconds of silence to end speech
-- `min_speech_duration`: Minimum speech length to process
+### Ajustando Configurações VAD
+Altere os parâmetros na inicialização do `VoiceAssistant`:
+- `threshold`: Sensibilidade VAD (0.1-1.0)
+- `silence_duration`: Segundos de silêncio para terminar a fala
+- `min_speech_duration`: Duração mínima de fala para processar
 
-## Troubleshooting
+## Solução de Problemas
 
-### Ollama Connection Issues
-- Ensure Ollama is running: `ollama serve`
-- Check if models are available: `ollama list`
+### Problemas de Conexão com Ollama
+- Certifique-se que o Ollama está rodando: `ollama serve`
+- Verifique se os modelos estão disponíveis: `ollama list`
 
-### Audio Issues
-- Check microphone permissions
-- Verify PyAudio installation
-- Ensure no other applications are using the microphone
+### Problemas de Áudio
+- Verifique permissões do microfone
+- Confirme a instalação do PyAudio
+- Certifique-se que nenhum outro aplicativo está usando o microfone
 
-### TTS Problems
-- Verify Yapper-TTS installation: `pip show yapper-tts`
-- Check available Piper voices in the Yapper documentation
+### Problemas com TTS
+- Verifique a instalação do Yapper-TTS: `pip show yapper-tts`
+- Confira as vozes Piper disponíveis na documentação do Yapper
