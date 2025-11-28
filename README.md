@@ -1,4 +1,5 @@
 # Voice Assistant with Ollama and Yapper-TTS
+Supported TTS languages, check [YapperTTS Enums](https://github.com/n1teshy/yapper-tts/blob/main/yapper/enums.py) 
 
 A complete voice assistant system that uses Whisper for speech recognition, Ollama for AI responses, and Yapper-TTS for natural Portuguese speech synthesis.
 
